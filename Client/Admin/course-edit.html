@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin - Edit course</title>
+    <meta name="robots" content="noindex">
+    <link type="text/css" href="../Public/assets/vendor/simplebar.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" href="../Public/assets/vendor/material-design-kit.css" rel="stylesheet">
+    <link type="text/css" href="../Public/assets/vendor/sidebar-collapse.min.css" rel="stylesheet">
+    <link type="text/css" href="../Public/assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../cdn.jsdelivr.net/fontawesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Public/assets/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../Public/assets/css/summernote.css">
+    <link rel="stylesheet" href="../Public/assets/css/nestable.css">
+</head>
+
+<body class="ls-top-navbar">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand navbar-dark bg-primary m-0 fixed-top">
+        <button class="navbar-toggler d-block" data-toggle="sidebar" type="button">
+<span class="material-icons">menu</span>
+</button>
+        <a href="index.html" class="navbar-brand"><i class="material-icons">school</i> LearnPlus</a>
+        <div class="navbar-spacer"></div>
+        <!-- Menu -->
+        <ul class="nav navbar-nav d-none d-md-flex">
+            <li class="nav-item">
+                <a class="nav-link" href="forum.html">Forum</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="help-center.html">Get Help</a>
+            </li>
+        </ul>
+
+        <!-- Menu -->
+        <ul class="nav navbar-nav">
+            <!-- User dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" data-toggle="dropdown" href="#" role="button"><img src="../Public/assets/images/people/50/guy-6.jpg" alt="Avatar" class="rounded-circle" width="40"></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="account-edit.html">
+                        <i class="material-icons">edit</i> Edit Account
+                    </a>
+                    <a class="dropdown-item" href="profile.html">
+                        <i class="material-icons">person</i> Public Profile
+                    </a>
+                    <a class="dropdown-item" href="../guest-login.html">
+                        <i class="material-icons">lock</i> Logout
+                    </a>
+                </div>
+            </li>
+            <!-- // END User dropdown -->
+        </ul>
+    </nav>
+    <!-- // END Navbar -->
+
+
+    <div class="container">
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="courses.html">Courses</a></li>
+            <li class="breadcrumb-item active">Edit course</li>
+        </ol>
+        <div class="media">
+            <div class="media-body">
+                <h1 class="page-heading h2">
+                    Edit Course
+                </h1>
+            </div>
+            <div class="media-right media-middle">
+                <a href="#" class="btn btn-success">SAVE</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Basic Information</h4>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" placeholder="Write a title" value="Basics of Vue.js">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="details">Description</label>
+                            <div id="summernote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque necessitatibus distinctio adipisci eius, unde dignissimos maxime doloribus quisquam non harum?</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Lessons</h4>
+                    </div>
+                    <div class="card-body">
+                        <p><a href="lesson-add.html" class="btn btn-primary">Add Lesson <i class="material-icons">add</i></a></p>
+                        <div class="nestable" id="nestable-handles-primary">
+                            <ul class="nestable-list">
+                                <li class="nestable-item nestable-item-handle" data-id="2">
+                                    <div class="nestable-handle"><i class="material-icons">menu</i></div>
+                                    <div class="nestable-content">
+                                        <div class="media">
+                                            <div class="media-left media-middle">
+                                                <img src="../Public/assets/images/vuejs.png" alt="" width="100" class="rounded">
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <h5 class="card-title h6 mb-0">
+                                                    <a href="lesson-add.html">Awesome Vue.js with SASS Processing</a>
+                                                </h5>
+                                                <small class="text-muted">updated 1 month ago</small>
+                                            </div>
+                                            <div class="media-right media-middle">
+                                                <a href="lesson-add.html" class="btn btn-white btn-sm"><i class="material-icons">edit</i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nestable-item nestable-item-handle" data-id="1">
+                                    <div class="nestable-handle"><i class="material-icons">menu</i></div>
+                                    <div class="nestable-content">
+                                        <div class="media">
+                                            <div class="media-left media-middle">
+                                                <img src="../Public/assets/images/nodejs.png" alt="" width="100" class="rounded">
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <h4 class="card-title h6 mb-0">
+                                                    <a href="lesson-add.html">Github Webhooks for Beginners</a>
+                                                </h4>
+                                                <small class="text-muted">updated 1 month ago</small>
+                                            </div>
+                                            <div class="media-right media-middle">
+                                                <a href="lesson-add.html" class="btn btn-white btn-sm"><i class="material-icons">edit</i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nestable-item nestable-item-handle" data-id="2">
+                                    <div class="nestable-handle"><i class="material-icons">menu</i></div>
+                                    <div class="nestable-content">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="../Public/assets/images/gulp.png" alt="" width="100" class="rounded">
+                                            </div>
+                                            <div class="media-body">
+                                                <h4 class="card-title h6 mb-0">
+                                                    <a href="lesson-add.html">Browserify: Writing Modular JavaScript</a>
+                                                </h4>
+                                                <small class="text-muted">updated 1 month ago</small>
+                                            </div>
+                                            <div class="media-right media-middle">
+                                                <a href="lesson-add.html" class="btn btn-white btn-sm"><i class="material-icons">edit</i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/97243285?title=0&amp;byline=0&amp;portrait=0" allowfullscreen=""></iframe>
+                    </div>
+                    <div class="card-body">
+                        <input type="text" class="form-control" value="https://player.vimeo.com/video/97243285?title=0&amp;byline=0&amp;portrait=0" />
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Meta</h4>
+                        <p class="card-subtitle">Extra Options </p>
+                    </div>
+
+                    <form class="form-horizontal card-body">
+                        <div class="form-group row">
+                            <label for="select" class="col-sm-6 col-form-label">Category</label>
+                            <div class="col-sm-6">
+                                <select class="custom-select form-control">
+              <option value="#">HTML</option>
+              <option value="#">Angular JS</option>
+              <option value="#" selected>Vue.js</option>
+              <option value="#">CSS / LESS</option>
+              <option value="#">Design / Concept</option>
+            </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="duration" class="col-sm-6 col-form-label">Duration</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="No. of Days" value="10">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="start" class="col-sm-6 col-form-label">Start Date</label>
+                            <div class="col-sm-6">
+                                <input class="datepicker form-control" type="text" value="01/28/2016" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="end" class="col-sm-6 col-form-label">End Date</label>
+                            <div class="col-sm-6">
+                                <input class="datepicker form-control" type="text" value="01/28/2016" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="details">Completion Badge</label>
+                            <div>
+                                <div data-toggle="buttons">
+                                    <label class="btn btn-white btn-circle active">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> 
+                <i class="material-icons">person</i>
+              </label>
+                                    <label class="btn btn-white btn-circle">
+                <input type="radio" name="options" id="option2" autocomplete="off">
+                <i class="material-icons">star</i>
+              </label>
+                                    <label class="btn btn-white btn-circle">
+                <input type="radio" name="options" id="option3" autocomplete="off">
+                <i class="material-icons">shop</i>
+              </label>
+                                    <label class="btn btn-white btn-circle">
+                <input type="radio" name="options" id="option3" autocomplete="off">
+                <i class="material-icons">monetization_on</i>
+              </label>
+                                    <label class="btn btn-white btn-circle">
+                <input type="radio" name="options" id="option3" autocomplete="off">
+                <i class="material-icons">enhanced_encryption</i>
+              </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="editLesson">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    // Edit Lesson
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Copyright &copy; 2018 - <a href="#">LearnPlus School</a>
+        </div>
+    </div>
+
+    <!-- Slide bar -->
+    <div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+        <div class="mdk-drawer__content ls-top-navbar-xs-up">
+            <div class="sidebar sidebar-left sidebar-light bg-white o-hidden">
+                <div class="sidebar-p-y" data-simplebar data-simplebar-force-enabled="true">
+                    <div class="sidebar-heading">APPLICATIONS</div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button" href="index.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">school</i> Admin
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="sidebar-heading">Admin</div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="courses.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">import_contacts</i> Course Manager
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="quizzes.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">help</i> Quiz Manager
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="profile.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">language</i> Public Profile
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="account-edit.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">account_box</i> Account Settings
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="messages.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">comment</i> Messages
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="earnings.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">trending_up</i> Earnings
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="statement.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">receipt</i> Statement
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="../guest-login.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">lock_open</i> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--End Slide bar -->
+    <!-- jQuery -->
+    <script src="../Public/assets/vendor/jquery.min.js"></script>
+    <script src="../Public/assets/vendor/popper.min.js"></script>
+    <script src="../Public/assets/vendor/bootstrap.min.js"></script>
+    <script src="../Public/assets/vendor/simplebar.js"></script>
+    <script src="../Public/assets/vendor/dom-factory.js"></script>
+    <script src="../Public/assets/vendor/material-design-kit.js"></script>
+    <script src="../Public/assets/vendor/sidebar-collapse.js"></script>
+    <script src="../Public/assets/js/main.js"></script>
+    <script src="../Public/assets/vendor/summernote.min.js"></script>
+    <script src="../Public/assets/vendor/bootstrap-datepicker.min.js"></script>
+    <script src="../Public/assets/vendor/jquery.nestable.js"></script>
+    <script src="../Public/assets/js/summernote.js"></script>
+    <script src="../Public/assets/js/date-time.js"></script>
+    <script src="../Public/assets/js/nestable.js"></script>
+</body>
+
+</html>
