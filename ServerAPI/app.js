@@ -8,19 +8,25 @@ var app = express();
 
 app.use(bodyParser.json());
 
-app.use(function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-
-    next();
-});
 
 var sbj = require('./Models/function/Subject');
+var user_ = require('./Models/function/users');
 
 app.get('/', (req, res, next) => {
 
     sbj.getAllSubject((err, rows) => {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json(rows);
+        }
+    });
+
+});
+
+app.get('/allUser', (req, res, next) => {
+
+    user_.getAllUser((err, rows) => {
         if (err) {
             res.json(err);
         } else {
