@@ -1,9 +1,20 @@
 var express = require('express');
 var router = express.Router();
-
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+var sbj = require('../Models/function/Subject')
+var bodyParser = require('body-parser')
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+router.use(bodyParser.urlencoded({ extended: false }))
 
 module.exports = router;
+
+router.get('/danhsach', (req, res, next) => {
+    async() => {
+        sbj.getAllSubject((err, rows) => {
+            if (err) {
+                res.json(err);
+            } else {
+                res.json(rows);
+            }
+        });
+    }
+})
